@@ -1,7 +1,7 @@
 {
   "name": "@node-loader/http",
   "description": "An http and https nodejs loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "lib/node-loader-http.js",
   "husky": {
