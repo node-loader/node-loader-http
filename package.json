@@ -1,0 +1,44 @@
+{
+  "name": "@node-loader/http",
+  "description": "An http and https nodejs loader",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/node-loader-http.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "mocha": "^8.1.3",
+    "prettier": "^2.1.1",
+    "pretty-quick": "^3.0.0"
+  },
+  "scripts": {
+    "test": "cross-env node --experimental-loader ./lib/node-loader-http.js ./test/run-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-loader/node-loader-http.git"
+  },
+  "keywords": [
+    "node",
+    "loader",
+    "http",
+    "https"
+  ],
+  "author": "Joel Denning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-loader/node-loader-http/issues"
+  },
+  "homepage": "https://github.com/node-loader/node-loader-http#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
