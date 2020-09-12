@@ -1,6 +1,6 @@
 # @node-loader/http
 
-A [nodejs loader](https://nodejs.org/dist/latest-v13.x/docs/api/esm.html#esm_experimental_loaders) for loading modules over the network with http/https. This allows you to customize module resolution by creating a `node.importmap` file.
+A [nodejs loader](https://nodejs.org/dist/latest-v13.x/docs/api/esm.html#esm_experimental_loaders) for loading modules over the network with http/https.
 
 ## Installation
 
@@ -33,4 +33,4 @@ planned, but not yet implemented.
 
 ## Composition
 
-If you wish to combine import maps with other NodeJS loaders, you may do so by using [node-loader-core](https://github.com/node-loader/node-loader-core).
+If you wish to combine http loader with other NodeJS loaders, you may do so by using [node-loader-core](https://github.com/node-loader/node-loader-core).
