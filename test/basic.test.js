@@ -5,7 +5,6 @@ describe(`basic http / https tests`, () => {
     const ns = await import(
       "http://unpkg.com/single-spa@5.5.5/lib/esm/single-spa.dev.js"
     );
-    console.log("ns", ns);
     assert.ok(ns.start);
     ns.start();
   });
@@ -14,8 +13,12 @@ describe(`basic http / https tests`, () => {
     const ns = await import(
       "https://unpkg.com/single-spa@5.5.5/lib/esm/single-spa.dev.js"
     );
-    console.log("ns", ns);
     assert.ok(ns.start);
     ns.start();
+  });
+
+  it(`can load a json module`, async () => {
+    const ns = await import("https://unpkg.com/single-spa@5.5.5/package.json");
+    assert.equal(ns.default.name, "single-spa");
   });
 });
