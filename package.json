@@ -9,13 +9,19 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-node-important-stuff": "^1.1.0",
     "husky": "^7.0.0",
     "mocha": "^9.0.3",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.0"
   },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
   "scripts": {
     "test": "cross-env node --experimental-loader ./lib/node-loader-http.js ./test/run-tests.js",
+    "lint": "eslint lib",
     "prepare": "husky install"
   },
   "repository": {
