@@ -3,14 +3,15 @@ on:
   - pull_request
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.0.1
-      with:
-        version: 6.11.5
-        run_install: |
-          - recursive: true
-            args: [--frozen-lockfile, --strict-peer-dependencies]
-    - run: pnpm run lint
-    - run: pnpm run test
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.11.5
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+      - run: pnpm run lint
+      - run: pnpm run test
