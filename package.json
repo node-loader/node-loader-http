@@ -21,6 +21,7 @@
   },
   "scripts": {
     "test": "cross-env node --experimental-loader ./lib/node-loader-http.js ./test/run-tests.js",
+    "check-format": "prettier --check .",
     "lint": "eslint lib",
     "prepare": "husky install"
   },
