@@ -11,6 +11,8 @@ npm install --save @node-loader/http
 yarn add --save @node-loader/http
 ```
 
+NodeJS 16.12 changed the Node Loader API. If using NodeJS@<16.12, please use `@node-loader/http@1`. Otherwise, use `@node-loader/http@latest`.
+
 ## Usage
 
 Create a file that imports a module over http:
