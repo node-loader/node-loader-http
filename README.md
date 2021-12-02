@@ -27,6 +27,25 @@ Now run node with the `--experimental-loader` flag:
 node --experimental-loader @node-loader/http file.js
 ```
 
+If you use @node-loader/core, you can pass down options to the loader.
+
+```js
+const HttpsProxyAgent = require("https-proxy-agent");
+
+export default {
+  loaders: [
+    {
+      options: {
+        fetchOptions: {
+          agent: new HttpsProxyAgent("http://123.123.123.123"),
+        },
+      },
+      loader: httpLoader,
+    },
+  ],
+};
+```
+
 ## Semantics
 
 This project uses [node-fetch](https://github.com/node-fetch/node-fetch) to implement familiar HTTP semantics,
